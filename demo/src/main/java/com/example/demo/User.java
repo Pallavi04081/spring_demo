@@ -28,7 +28,7 @@ public class User {
       private String password;
 
       @Column(nullable = false,unique = true)
-      private  Integer  mobileNumber;
+      private  String  mobileNumber;
       
       @Column(nullable = true)
       private String accessToken;
@@ -43,7 +43,7 @@ public class User {
     }
 
 
-    public User(Integer id, String name, String username, String password, Integer mobileNumber, String email) {
+    public User(Integer id, String name, String username, String password, String mobileNumber, String email) {
         this.id = id;
         this.name = name;
         this.username = username;
@@ -68,7 +68,7 @@ public class User {
         return password;
     }
 
-    public Integer getMobileNumber() {
+    public String getMobileNumber() {
         return mobileNumber;
     }
 
@@ -118,7 +118,7 @@ public class User {
     }
 
 
-    public void setMobileNumber(Integer mobileNumber) {
+    public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
     } 
     
